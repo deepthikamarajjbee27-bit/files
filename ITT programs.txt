@@ -1,0 +1,38 @@
+A newly opened multinational brand has decided to base their company logo on the three most common characters in the company name. They are now trying out various combinations of company names and logos based on this condition. Given a string , which is the company name in lowercase letters, your task is to find the top three most common characters in the string.
+Print the three most common characters along with their occurrence count. Sort in descending order of occurrence count. If the occurrence count is the same, sort the characters in alphabetical order.
+solution:from collections import Counter
+         if __name__ == '__main__':
+         s = sorted(input())
+         counts = Counter(s).most_common(3)
+         for char, count in counts:
+         print(char, count)
+Consider a list (list = []).
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+You can perform the following commands:
+insert i e: Insert integer  at position .
+print: Print the list.
+remove e: Delete the first occurrence of integer .
+append e: Insert integer  at the end of the list.
+sort: Sort the list.
+pop: Pop the last element from the list.
+reverse: Reverse the list.
+Initialize your list and read in the value of  followed by  lines of commands where each comand will be of the  types listed above. Iterate through each command in order and perform the corresponding operation on your list.
+solution:if __name__ == '__main__':
+         N = int(input())
+         my_list = []
+         for _ in range(N):
+         command, *args = input().split()
+         args = list(map(int, args))
+         if command == "print":
+            print(my_list)
+        else:
+            getattr(my_list, command)(*args)
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+The included code stub will read an integer, , from STDIN. Without using any string methods, try to print the following:
+123.....n
+Note that "...." represents the consecutive values in between.
+solution:if __name__ == '__main__':
+         n = int(input())
+         for i in range(1, n + 1):
+         print(i, end="")
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
